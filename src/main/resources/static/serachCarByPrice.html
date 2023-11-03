@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+.Class1{
+width:50% ;
+border: 2px solid;
+margin: auto;
+align-self: auto;
+color: green;
+}
+</style>
+</head>
+<body>
+<div class="Class1">
+<h1>Best Choice Cars</h1>
+<h3>Choose a Price Range to find Available Car</h3>
+<form action="price" method="post">
+<label name="price"> Enter Price In Lakh</label>
+<br>
+<input type="number" name="price" placeholder=" Ex : 5,00,000 , 5 lakh" >
+<input type="radio" name="x" value="below"><span> Below</span>
+<input type="radio" name="x" value="above"> <span> Above</span>
+<tr><td><input type="submit" value="Search"></td></tr>
+</table>
+</form>
+<button onclick="back();">Back</button>
+<button><a href="/bbc">Home</a></button>
+</div>
+</body>
+</html>
+<script>
+function back(){
+	window.history.back();
+}
+</script>

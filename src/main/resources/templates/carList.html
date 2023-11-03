@@ -1,0 +1,42 @@
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<style>
+.Class1{
+width:50% ;
+border: 2px solid;
+margin: auto;
+align-self: auto;
+color: green;
+padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="Class1">
+<h2>Best Choice Cars</h2>
+<h3>Choose a Car to Buy</h3>
+<table>
+<form action="select" method="post">
+<tr><th>Select</th><th> Brand</th> <th> Model</th> <th> Year</th> <th>No Of Kms</th> <th> Price</th> <th> Fuel</th></tr>
+<tr th:each="car:${carList}">
+<td><input type="radio" name ="car" th:value="${car}" /></td>
+<td><span th:text="${car.brand}"></span></td>
+<td><span th:text="${car.model}"></span></td>
+<td><span th:text="${car.year}"></span></td>
+<td><span th:text="${car.noOfKms}"></span></td>
+<td><span th:text="${car.price}"></span></td>
+<td><span th:text="${car.fuel}"></span></td>
+</tr>
+</table>
+<button><input type="submit"  value="Book Car"/></button>
+</form>
+<button><a href="/bbc">HOME</a></button>
+<button onclick="back();"> Back</button>
+</div>
+</body>
+</html>
+<script>
+function back(){
+	window.history.back();
+}
+</script>
